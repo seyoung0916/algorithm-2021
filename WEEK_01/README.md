@@ -33,7 +33,7 @@
 * 세 점이 주어졌을 때 사각형의 마지막 점 출력
 
 :heavy_check_mark: 해결  
-* 입력을 받아 딕셔너리 자료형에 해당 숫자의 출현 횟수를 저장(xcheck, ycheck)<br>
+* 입력을 받아 딕셔너리 자료형에 해당 숫자의 출현 횟수를 저장(xcheck, ycheck) <br>
   -> 기존에 있던 숫자면 +1, 아니면 1로 저장
 * xcheck, ycheck를 확인하면서 value값이 1이면 그게 x, y가 됨
 
@@ -131,6 +131,37 @@
 
 :heavy_check_mark: 해결  
 * N만큼 입력받아 count를 사용해 0, 1 개수 비교
+
+---  
+
+## LeetCode 3247 (Remove Element)
+:pushpin: 유형
+* 배열
+
+:question: 문제
+* 배열 nums와 값 val이 주어졌을 때, nums에서 val을 제거하고 새로운 길이를 출력
+
+:heavy_check_mark: 해결  
+* len(nums)의 고정 길이만큼 반복
+* idx는 nums의 비교해야 할 원소를 가리킴
+* idx번째 값과 val이 같으면 삭제하고 idx를 그대로 냅둠 <br>
+  -> 그렇게 해야 다음 비교 때 idx번째의 원소를 다시 비교 <br>
+  같지 않은 경우에는 idx를 1 증가시켜 다음 원소를 비교하게 함
+  
+---
+
+## LeetCode 3248 (Remove Duplicates from Sorted Array)
+
+:pushpin: 유형
+* 배열
+
+:question: 문제
+* num(정렬된 상태)의 중복되는 원소값을 제거한 후, nums 길이 반환
+
+:heavy_check_mark: 해결
+* idx는 현재 nums의 인덱스를 가리킴
+* idx와 idx+1번째 원소가 같은지를 비교하므로 len(nums)-1만큼 반복
+* 같으면 del, 다르면 idx+=1
 
 >> sample
 ---  
